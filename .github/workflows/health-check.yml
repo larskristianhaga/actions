@@ -22,7 +22,7 @@ jobs:
     name: Check for status 200 and title text "Trefellingsspesialisten"
     steps:
       - name: Check for status 200 and title text "Trefellingsspesialisten"
-        uses: johnlokerse/website-healthcheck@v2
+        uses: johnlokerse/website-healthcheck@v3
         with:
-          web-url: "johnlokerse/website-healthcheck@v2"
+          web-url: "johnlokerse/website-healthcheck@v3"
           scan-for-text: "Trefellingsspesialisten"
