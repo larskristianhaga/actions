@@ -33,6 +33,11 @@ jobs:
       - name: Check for status 200 and title text "Trefellingsspesialisten"
         uses: johnlokerse/website-healthcheck@v3
         with:
-          web-url: "https://paal-erik.no/"
+          web-url: "http://paal-erik.no/"
+          scan-for-text: "Trefellingsspesialisten"
+      - name: Check for status 200 and title text "Trefellingsspesialisten"
+        uses: johnlokerse/website-healthcheck@v3
+        with:
+          web-url: "paal-erik.no"
           scan-for-text: "Trefellingsspesialisten"
 
