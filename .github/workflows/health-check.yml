@@ -10,17 +10,19 @@ on:
 
 jobs:
   check-health-of-websites:
-    name: "Health Check of Websites"
+    name: "Health Check of websites related to 3fs.no"
     runs-on: ubuntu-latest
+
     steps:
-      - name: Ping the websites and check the response
+      - name: "Ping 3fs.no and check the response"
         uses: jtalk/url-health-check-action@v4
         with:
-          url: https://www.3fs.no/|http://www.3fs.no/
+          url: https://www.3fs.no/|http://www.3fs.no/|3fs.no
           follow-redirect: true
           max-attempts: 2
           retry-delay: 30s
-      - name: Ping the websites and check the response
+
+      - name: "Ping paal-erik.no and check the response"
         uses: jtalk/url-health-check-action@v4
         with:
           url: http://paal-erik.no/|paal-erik.no
@@ -28,23 +30,18 @@ jobs:
           max-attempts: 2
           retry-delay: 30s
 
-  health_check_job:
-    runs-on: ubuntu-latest
-    name: Check for status 200 and title text "Trefellingsspesialisten"
-    steps:
-      - name: Check for status 200 and title text "Trefellingsspesialisten"
-        uses: johnlokerse/website-healthcheck@v3
+      - name: "Ping trefellingspesialisten.no and check the response"
+        uses: jtalk/url-health-check-action@v4
         with:
-          web-url: "https://www.3fs.no/"
-          scan-for-text: "lars"
-      - name: Check for status 200 and title text "Trefellingsspesialisten"
-        uses: johnlokerse/website-healthcheck@v3
-        with:
-          web-url: "http://paal-erik.no/"
-          scan-for-text: "Trefellingsspesialisten"
-      - name: Check for status 200 and title text "Trefellingsspesialisten"
-        uses: johnlokerse/website-healthcheck@v3
-        with:
-          web-url: "paal-erik.no"
-          scan-for-text: "Trefellingsspesialisten"
+          url: http://trefellingspesialisten.no/|trefellingspesialisten.no
+          follow-redirect: true
+          max-attempts: 2
+          retry-delay: 30s
 
+      - name: "Ping trefellings-spesialisten.no and check the response"
+        uses: jtalk/url-health-check-action@v4
+        with:
+          url: http://trefellings-spesialisten.no/|trefellings-spesialisten.no
+          follow-redirect: true
+          max-attempts: 2
+          retry-delay: 30s
