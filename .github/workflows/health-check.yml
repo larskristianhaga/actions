@@ -1,4 +1,4 @@
-name: "Stale Branches"
+name: "Health Check"
 
 on:
   workflow_dispatch:
@@ -7,6 +7,7 @@ on:
 
 jobs:
   check-health-of-websites:
+    name: "Health Check of Websites"
     runs-on: ubuntu-latest
     steps:
       - name: Ping the websites and check the response
