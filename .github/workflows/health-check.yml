@@ -1,0 +1,28 @@
+name: "Stale Branches"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *' # Run every day at 12:00
+
+jobs:
+  check-health-of-websites:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the websites and check the response
+        uses: jtalk/url-health-check-action@v4
+        with:
+          url: https://www.3fs.no/|http://www.3fs.no/|https://paal-erik.no/|http://paal-erik.no/
+          follow-redirect: true
+          max-attempts: 2
+          retry-delay: 30s
+
+  health_check_job:
+    runs-on: ubuntu-latest
+    name: Check for status 200 and title text "Trefellingsspesialisten"
+    steps:
+      - name: Check for status 200 and title text "Trefellingsspesialisten"
+        uses: johnlokerse/website-healthcheck@v2
+        with:
+          web-url: "johnlokerse/website-healthcheck@v2"
+          scan-for-text: "Trefellingsspesialisten"
