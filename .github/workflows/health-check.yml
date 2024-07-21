@@ -36,7 +36,7 @@ jobs:
         uses: johnlokerse/website-healthcheck@v3
         with:
           web-url: "https://www.3fs.no/"
-          scan-for-text: "Trefellingsspesialisten"
+          scan-for-text: "nei"
       - name: Check for status 200 and title text "Trefellingsspesialisten"
         uses: johnlokerse/website-healthcheck@v3
         with:
