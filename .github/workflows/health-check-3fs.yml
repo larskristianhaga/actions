@@ -11,7 +11,7 @@ on:
 jobs:
   check-health-of-websites:
     name: "Health Check of websites related to 3fs.no"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
 
     steps:
       - name: "Ping 3fs.no and check the response"
