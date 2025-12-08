@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for broken links
-        uses: ruzickap/action-my-broken-link-checker@df42b59637dfd06c247a8a95db0ab38708ea83d2 # 2.9.0
+        uses: ruzickap/action-my-broken-link-checker@68d00ba73d919c9f70715625f6cf70f0b0ba19a9 # 3.0.0
         with:
           url: https://www.3fs.no
           cmd_params: "--max-connections=1 --buffer-size=8192 --header='User-Agent:muffet' --timeout=30 --exclude='siteassets.parastorage.com|static.parastorage.com|static.wixstatic.com|browser.sentry-cdn.com' --verbose --color=always"
