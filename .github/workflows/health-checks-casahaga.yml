@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: "Ping casahaga.no and check the response"
-        uses: jtalk/url-health-check-action@v4
+        uses: jtalk/url-health-check-action@v5
         with:
           url: https://casahaga.no/|http://casahaga.no/|casahaga.no
           follow-redirect: true

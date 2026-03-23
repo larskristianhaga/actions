@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: "Ping 3fs.no and check the response"
-        uses: jtalk/url-health-check-action@v4
+        uses: jtalk/url-health-check-action@v5
         with:
           url: https://www.3fs.no/|http://www.3fs.no/|3fs.no
           follow-redirect: true
@@ -23,7 +23,7 @@ jobs:
           retry-delay: 30s
 
       - name: "Ping paal-erik.no and check the response"
-        uses: jtalk/url-health-check-action@v4
+        uses: jtalk/url-health-check-action@v5
         with:
           url: http://paal-erik.no/|paal-erik.no
           follow-redirect: true
@@ -31,7 +31,7 @@ jobs:
           retry-delay: 30s
 
       - name: "Ping trefellingspesialisten.no and check the response"
-        uses: jtalk/url-health-check-action@v4
+        uses: jtalk/url-health-check-action@v5
         with:
           url: http://trefellingspesialisten.no/|trefellingspesialisten.no
           follow-redirect: true
@@ -39,7 +39,7 @@ jobs:
           retry-delay: 30s
 
       - name: "Ping trefellings-spesialisten.no and check the response"
-        uses: jtalk/url-health-check-action@v4
+        uses: jtalk/url-health-check-action@v5
         with:
           url: http://trefellings-spesialisten.no/|trefellings-spesialisten.no
           follow-redirect: true
