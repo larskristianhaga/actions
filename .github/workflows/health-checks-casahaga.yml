@@ -11,7 +11,7 @@ on:
 jobs:
   check-health-of-website:
     name: "Health Check of casahaga.no"
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-26.04-arm
 
     steps:
       - name: "Ping casahaga.no and check the response"
